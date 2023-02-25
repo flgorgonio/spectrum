@@ -1,7 +1,7 @@
 import distance
 
-u = [1, 0, 0]
-v = [1, 1, 0]
+u = [1, 1, 0]
+v = [0, 1, 0]
 
 # dist = distance.euclidean(u, v)
 # print("Distância Euclidiana:", dist)
@@ -14,3 +14,6 @@ v = [1, 1, 0]
 
 dist = distance.braycurtis(u, v)
 print("Distância Braycurtis:", dist)
+
+dist = distance.canberra(u, v)
+print("Distância Canberra:", dist)
