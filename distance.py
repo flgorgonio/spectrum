@@ -56,3 +56,13 @@ def canberra(u, v):
     else:
       dist = dist + (dist_1 / dist_2)
   return (dist)
+
+
+### Compute the Chebyshev distance between two 1-D arrays
+def chebyshev(u, v):
+  if len(u) != len(v):
+    return None
+  dist_array = []
+  for i in range(len(u)):
+    dist_array.append(fabs(u[i] - v[i]))
+  return max(dist_array)
