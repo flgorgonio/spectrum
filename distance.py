@@ -9,15 +9,6 @@ def euclidean(u, v):
   return sqrt(dist)
 
 
-def manhattan(u, v):
-  if len(u) != len(v):
-    return None
-  dist = 0
-  for i in range(len(u)):
-    dist = dist + fabs(u[i] - v[i])
-  return dist
-
-
 def minkowski(u, v, p):
   if len(u) != len(v):
     return None
@@ -66,3 +57,13 @@ def chebyshev(u, v):
   for i in range(len(u)):
     dist_array.append(fabs(u[i] - v[i]))
   return max(dist_array)
+
+
+### Compute the City Block (Manhattan) distance between two 1-D arrays
+def city_block(u, v):
+  if len(u) != len(v):
+    return None
+  dist = 0
+  for i in range(len(u)):
+    dist = dist + fabs(u[i] - v[i])
+  return dist
